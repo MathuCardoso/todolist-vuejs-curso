@@ -58,8 +58,8 @@
     function updateTodo(id) {
         const todoUpdate = findToDo(id, true);
         if (!todoUpdate[0]) return;
-        todo.value = todoUpdate[0];
-    }
+        todo.value = {...todoUpdate[0]};
+    }   
 
     function validateData() {
         let hasErrors = false;
@@ -133,9 +133,9 @@
                 A fazeres cadastrados: {{ todos.length }}
             </h2>
         </div>
-        <div class="d-flex flex-wrap gap-10">
+        <div class="grid grid-cols-4">
             <section
-                class="card"
+                class="card h-fit"
                 style="max-width: 320px"
                 v-for="todo in todos"
                 :key="todo.id"
