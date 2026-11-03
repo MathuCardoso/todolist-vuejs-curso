@@ -50,7 +50,7 @@
             alert("Todo não encontrada.");
         }
 
-        if (confirm("Tem certeza que deseja deletar este a fazer?")) {
+        if (confirm("Tem certeza que deseja deletar esta tarefa?")) {
             todos.value.splice(index, 1);
         }
     }
@@ -100,7 +100,7 @@
 
 <template>
     <div class="d-flex flex-column gap-10">
-        <h1 class="text-center fw-bold">Cadastro de A Fazeres</h1>
+        <h1 class="text-center fw-bold">Cadastro de Tarefas</h1>
         <div class="w-100 d-flex justify-content-center align-items-center">
             <div class="w-25 d-flex flex-column gap-6">
                 <Input
@@ -130,7 +130,7 @@
 
         <div>
             <h2 class="text-sm m-0">
-                A fazeres cadastrados: {{ todos.length }}
+                Trefas cadastrados: {{ todos.length }}
             </h2>
         </div>
         <div class="grid grid-cols-4">

@@ -2,7 +2,7 @@
 
 **Disciplina:** Projeto de Extensão — TADS, 2º período
 **Horário:** 19:00 às 22:00 (intervalo 20:30–20:50) — 2h40 de aula efetiva
-**Produto final:** SPA "Cadastro de A Fazeres" com cadastro, edição, exclusão e validação (Vue 3 + Vite + Vue Router)
+**Produto final:** SPA "Cadastro de Tarefas" com cadastro, edição, exclusão e validação (Vue 3 + Vite + Vue Router)
 
 Este roteiro traz **todos os passos e todo o código**, na ordem em que será digitado. Cada etapa termina com um **ponto de controle** para conferir se a turma está acompanhando.
 
@@ -260,7 +260,7 @@ O `<RouterView />` mostra a página da rota atual, dentro do layout.
 <script setup></script>
 
 <template>
-    <h1 class="text-center fw-bold">Cadastro de A Fazeres</h1>
+    <h1 class="text-center fw-bold">Cadastro de Tarefas</h1>
 </template>
 ```
 
@@ -293,7 +293,7 @@ const router = createRouter({
 export default router
 ```
 
-> ✅ **Ponto de controle:** o título **"Cadastro de A Fazeres"** aparece centralizado, sem erros no console.
+> ✅ **Ponto de controle:** o título **"Cadastro de Trefas"** aparece centralizado, sem erros no console.
 
 ---
 
@@ -319,7 +319,7 @@ Objetivo: montar o formulário com `<input>` simples e ver a reatividade funcion
 
 <template>
     <div class="d-flex flex-column gap-10">
-        <h1 class="text-center fw-bold">Cadastro de A Fazeres</h1>
+        <h1 class="text-center fw-bold">Cadastro de Tarefas</h1>
 
         <div class="w-100 d-flex justify-content-center align-items-center">
             <div class="w-25 d-flex flex-column gap-6">
@@ -342,7 +342,7 @@ Objetivo: montar o formulário com `<input>` simples e ver a reatividade funcion
 
         <div>
             <h2 class="text-sm m-0">
-                A fazeres cadastrados: {{ todos.length }}
+                Tarefas cadastrados: {{ todos.length }}
             </h2>
         </div>
     </div>
@@ -574,7 +574,7 @@ Trocar o bloco do formulário no `<template>` (remove os `<input>` e os `<p>` de
 - `validateData`: percorre os campos (ignorando `id` e `created_at`); se vazio, guarda a mensagem em `errors`; retorna `true` só se não houve erro.
 - `:error="errors.title"` passa a mensagem para o `Input`, que a exibe com `v-if`.
 - `@update:model-value="errors.title = null"` apaga o erro assim que o usuário volta a digitar.
-- Conferir o contador **"A fazeres cadastrados"** subindo a cada cadastro (as tarefas ainda não aparecem na tela).
+- Conferir o contador **"Tarefas cadastrados"** subindo a cada cadastro (as tarefas ainda não aparecem na tela).
 
 > ✅ **Ponto de controle:** campo vazio mostra mensagem em vermelho; campos preenchidos exibem o alerta de sucesso e o contador aumenta.
 
@@ -695,7 +695,7 @@ Trocar o bloco do formulário no `<template>` (remove os `<input>` e os `<p>` de
             return;
         }
 
-        if (confirm("Tem certeza que deseja deletar este a fazer?")) {
+        if (confirm("Tem certeza que deseja deletar esta tarefa?")) {
             todos.value.splice(index, 1);
         }
     }
@@ -747,7 +747,7 @@ Trocar o bloco do formulário no `<template>` (remove os `<input>` e os `<p>` de
 
 <template>
     <div class="d-flex flex-column gap-10">
-        <h1 class="text-center fw-bold">Cadastro de A Fazeres</h1>
+        <h1 class="text-center fw-bold">Cadastro de Tarefas</h1>
 
         <div class="w-100 d-flex justify-content-center align-items-center">
             <div class="w-25 d-flex flex-column gap-6">
@@ -778,7 +778,7 @@ Trocar o bloco do formulário no `<template>` (remove os `<input>` e os `<p>` de
 
         <div>
             <h2 class="text-sm m-0">
-                A fazeres cadastrados: {{ todos.length }}
+                Tarefas cadastrados: {{ todos.length }}
             </h2>
         </div>
 
