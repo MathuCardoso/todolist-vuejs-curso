@@ -1,6 +1,6 @@
-# Todo Projeto
+# Todo List - VueJs
 
-Aplicação simples de lista de tarefas ("A Fazeres") feita com Vue 3 e Vite. Permite cadastrar, editar e excluir tarefas, com validação dos campos.
+Aplicação simples de lista de tarefas feita com Vue 3 e Vite. Permite cadastrar, editar e excluir tarefas, com validação dos campos.
 
 ## Funcionalidades
 
